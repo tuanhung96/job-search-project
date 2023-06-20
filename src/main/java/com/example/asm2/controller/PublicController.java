@@ -46,8 +46,8 @@ public class PublicController {
         List<Recruitment> recruitments = getTop5Recruitment();
         theModel.addAttribute("recruitments", recruitments);
 
-        List<Category> categories = categoryService.getTop4Category();
-        theModel.addAttribute("categories", categories);
+//        List<Category> categories = categoryService.getTop4Category();
+//        theModel.addAttribute("categories", categories);
 
         if (principal != null) {
             User user = userService.findByEmail(principal.getName());

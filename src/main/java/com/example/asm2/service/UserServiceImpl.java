@@ -72,6 +72,7 @@ public class UserServiceImpl implements UserService{
         mailSender.send(message);
     }
 
+    @Transactional
     public boolean verify(String verificationCode) {
         User user = userRepository.findByVerificationCode(verificationCode);
 
