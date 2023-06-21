@@ -6,19 +6,16 @@ import org.springframework.core.env.Environment;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
 @Configuration
 public class ResourceWebConfig implements WebMvcConfigurer {
-    private Environment environment;
-
-    @Autowired
-    public ResourceWebConfig(Environment environment) {
-        this.environment = environment;
-    }
 
     @Override
     public void addResourceHandlers(final ResourceHandlerRegistry registry) {
-        String location = environment.getProperty("app.file.storage.mapping");
-
-        registry.addResourceHandler("/uploads/**").addResourceLocations(location);
+        Path uploadDir = Paths.get("uploads");
+        String uploadPath = uploadDir.toFile().getAbsolutePath();
+        registry.addResourceHandler("/uploads/**").addResourceLocations("file:/"+ uploadPath + "/");
     }
 }
