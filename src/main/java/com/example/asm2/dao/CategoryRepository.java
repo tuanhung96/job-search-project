@@ -10,7 +10,7 @@ import java.util.List;
 
 @Repository
 public interface CategoryRepository extends JpaRepository<Category, Integer> {
-    @Query(value = "SELECT top(4) * FROM category ORDER BY number_choose desc", nativeQuery = true)
+    @Query(value = "SELECT * FROM category ORDER BY number_choose desc LIMIT 4", nativeQuery = true)
     List<Category> getTop4Category();
 
 }

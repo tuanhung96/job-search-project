@@ -25,9 +25,6 @@ public class Recruitment {
     @Column(name = "quantity")
     private Integer quantity;
 
-    @Column(name = "rank")
-    private String rank;
-
     @Column(name = "salary")
     private String salary;
 
@@ -63,7 +60,6 @@ public class Recruitment {
         this.description = description;
         this.experience = experience;
         this.quantity = quantity;
-        this.rank = rank;
         this.salary = salary;
         this.status = status;
         this.title = title;
@@ -120,14 +116,6 @@ public class Recruitment {
 
     public void setQuantity(Integer quantity) {
         this.quantity = quantity;
-    }
-
-    public String getRank() {
-        return rank;
-    }
-
-    public void setRank(String rank) {
-        this.rank = rank;
     }
 
     public String getSalary() {
@@ -203,7 +191,6 @@ public class Recruitment {
                 ", description='" + description + '\'' +
                 ", experience='" + experience + '\'' +
                 ", quantity=" + quantity +
-                ", rank='" + rank + '\'' +
                 ", salary='" + salary + '\'' +
                 ", status=" + status +
                 ", title='" + title + '\'' +
