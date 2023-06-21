@@ -191,7 +191,7 @@
                                     <p class="mb-4" style="width: 700px" th:utext="${applyPost.user.description}">.</p>
                                     <div class="row">
                                         <p><a th:if="${applyPost.nameCv != null}" class="btn btn-primary"
-                                              th:href="@{'/uploads/cv' + ${applyPost.nameCv}}">Xem cv</a></p>
+                                              th:href="@{'/uploads/cv/' + ${applyPost.nameCv}}">Xem cv</a></p>
                                         <!--<p th:if="${applyPost.status == 0}" style="margin-left: 10px"><a
                                                 class="btn btn-outline-primary"
                                                 th:href="${'/user/approve/'} +${applyPost.user.id} +${'/'} +${recruitment.id}">Duyệt</a>
