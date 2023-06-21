@@ -51,8 +51,8 @@ public class PublicController {
             theModel.addAttribute("user", user);
         }
 
-        List<Category> categories = categoryService.getTop4Category();
-        theModel.addAttribute("categories", categories);
+//        List<Category> categories = categoryService.getTop4Category();
+//        theModel.addAttribute("categories", categories);
 
         return "public/home";
     }

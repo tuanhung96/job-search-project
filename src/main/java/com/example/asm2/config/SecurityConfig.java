@@ -63,7 +63,7 @@ public class SecurityConfig {
                                 .maxSessionsPreventsLogin(false)     // second login will cause the first to be invalidated
                 )
                 .logout(logout -> logout.permitAll()          // add logout support for default url "/logout"
-                        .logoutSuccessUrl("/showLoginPage")   // it means: permitAll access to "/showLoginPage" too
+                        .logoutSuccessUrl("/")   // it means: permitAll access to "/" too
                         .deleteCookies("JSESSIONID")
                         .invalidateHttpSession(true)          // delete Cookies and invalidate Session when logout
                 );
