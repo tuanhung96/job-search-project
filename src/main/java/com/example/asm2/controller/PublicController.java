@@ -43,13 +43,13 @@ public class PublicController {
 //        List<String[]> companies = getInformationOfTop5Company();
 //        theModel.addAttribute("companies", companies);
 
-        List<Recruitment> recruitments = getTop5Recruitment();
-        theModel.addAttribute("recruitments", recruitments);
-
-        if (principal != null) {
-            User user = userService.findByEmail(principal.getName());
-            theModel.addAttribute("user", user);
-        }
+//        List<Recruitment> recruitments = getTop5Recruitment();
+//        theModel.addAttribute("recruitments", recruitments);
+//
+//        if (principal != null) {
+//            User user = userService.findByEmail(principal.getName());
+//            theModel.addAttribute("user", user);
+//        }
 
 //        List<Category> categories = categoryService.getTop4Category();
 //        theModel.addAttribute("categories", categories);
@@ -72,13 +72,13 @@ public class PublicController {
 //        return companies;
 //    }
 
-    public List<Recruitment> getTop5Recruitment() {
-        List<Integer> top5RecruitmentId = applypostService.getTop5RecruitmentId();
-        List<Recruitment> recruitments = new ArrayList<>();
-        for (int i=0; i<top5RecruitmentId.size();i++) {
-            Recruitment recruitment = recruitmentService.findById(top5RecruitmentId.get(i));
-            recruitments.add(recruitment);
-        }
-        return recruitments;
-    }
+//    public List<Recruitment> getTop5Recruitment() {
+//        List<Integer> top5RecruitmentId = applypostService.getTop5RecruitmentId();
+//        List<Recruitment> recruitments = new ArrayList<>();
+//        for (int i=0; i<top5RecruitmentId.size();i++) {
+//            Recruitment recruitment = recruitmentService.findById(top5RecruitmentId.get(i));
+//            recruitments.add(recruitment);
+//        }
+//        return recruitments;
+//    }
 }
