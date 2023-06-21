@@ -11,7 +11,7 @@ import java.util.List;
 
 @Repository
 public interface RecruitmentRepository extends JpaRepository<Recruitment, Integer> {
-    @Query(value = "SELECT top(5) company_id FROM recruitment GROUP BY company_id ORDER BY count(*) desc", nativeQuery = true)
+    @Query(value = "SELECT company_id FROM recruitment GROUP BY company_id ORDER BY count(*) desc LIMIT 5", nativeQuery = true)
     List<Integer> getTop5CompanyId();
 
     @Query("select r from Recruitment r where r.title like %?1%")

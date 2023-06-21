@@ -9,7 +9,7 @@ import java.util.List;
 
 @Repository
 public interface ApplyPostRepository extends JpaRepository<ApplyPost, Integer> {
-    @Query(value = "SELECT top(5) recruitment_id FROM applypost GROUP BY recruitment_id ORDER BY count(*) desc", nativeQuery = true)
+    @Query(value = "SELECT recruitment_id FROM applypost GROUP BY recruitment_id ORDER BY count(*) desc LIMIT 5", nativeQuery = true)
     List<Integer> getTop5RecruitmentId();
 
     @Query("select a from ApplyPost a where a.recruitment.id = ?1")
