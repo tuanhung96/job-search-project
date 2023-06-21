@@ -14,7 +14,10 @@ public class ResourceWebConfig implements WebMvcConfigurer {
     public void addResourceHandlers(final ResourceHandlerRegistry registry) {
         Path uploadDir = Paths.get("uploads");
         String uploadPath = uploadDir.toFile().getAbsolutePath();
+        // if run on linux (heroku,...)
         registry.addResourceHandler("/uploads/**").addResourceLocations("file:"+ uploadPath + "/");
-        System.out.println("Change to trigger");
+        // if run on window
+//        registry.addResourceHandler("/uploads/**").addResourceLocations("file:/"+ uploadPath + "/");
+        System.out.println(uploadPath);
     }
 }
