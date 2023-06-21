@@ -44,6 +44,7 @@ public class SecurityConfig {
                         .requestMatchers("/home").permitAll()
                         .requestMatchers("/register").permitAll()
                         .requestMatchers("/verify").permitAll()
+                        .requestMatchers("/uploads/**").permitAll()
                         .requestMatchers("/candidate/**").hasRole("CANDIDATE")
                         .requestMatchers("/employer/**").hasRole("EMPLOYER")
                         .anyRequest().authenticated()
