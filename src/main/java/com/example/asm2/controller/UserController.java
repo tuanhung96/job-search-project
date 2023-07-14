@@ -57,7 +57,7 @@ public class UserController {
                               Principal principal, HttpServletRequest request) {
         User user = userService.findByEmail(principal.getName());
 
-        // save image in upload directory
+        // save image in uploads directory
         String siteURL = request.getRequestURL().toString().replace(request.getServletPath(), "");
         if (user.getImage() != null) {
             FileUtils.deleteImageFile(user.getImage().replace(siteURL, ""));
@@ -85,7 +85,7 @@ public class UserController {
         User user = userService.findByEmail(principal.getName());
         Company company = user.getCompany();
 
-        // save logo in upload directory
+        // save logo in uploads directory
         String siteURL = request.getRequestURL().toString().replace(request.getServletPath(), "");
         if (company.getLogo() != null) {
             FileUtils.deleteImageFile(company.getLogo().replace(siteURL, ""));
