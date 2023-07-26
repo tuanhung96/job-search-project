@@ -1,12 +1,8 @@
 # job-search-project
 
-This project is an intermediary bridge between employers and candidates to meet the needs of businesses looking for employees 
-as well as job search of candidates through the internet.
-
 Link Demo: https://work-cv-fda9af54b7b3.herokuapp.com
 
-Usage:
-- Make sure you have IDE installed (IntelliJ, Eclipse,...)
-- Clone this project: 
-$ git clone https://github.com/tuanhung96/job-search-project
-- Config to connect your database in application.properties file
+Dự án này là một website giúp tạo cầu nối trung gian giữa nhà tuyển dụng và các ứng viên để đáp ứng nhu cầu tìm kiếm nhân sự của các doanh nghiệp cũng như tìm kiếm việc làm của các ứng viên thông qua mạng internet.
+
+
+
