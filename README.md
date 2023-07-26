@@ -10,6 +10,8 @@ Chức năng của website:
 
 1. Chức năng chung
 - Hiển thị các công ty nổi bật và những việc làm nổi bật nhất: nhiều người ứng tuyển nhất
+![ASM2_Hinh3](https://github.com/tuanhung96/job-search-project/assets/113849269/96f1b15e-006c-4422-a04f-a6042aab3531)
+
 - Đăng ký và xác thực email, đăng nhập, đăng xuất
 
 2. Chức năng nhà tuyển dụng
