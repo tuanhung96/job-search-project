@@ -34,11 +34,11 @@ public class Company {
     @Column(name = "status")
     private Integer status;
 
-    @OneToOne(cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.REFRESH})
+    @OneToOne(cascade = {CascadeType.DETACH, CascadeType.REFRESH})
     @JoinColumn(name = "user_id")
     private User user;
 
-    @OneToMany(mappedBy = "company", cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.REFRESH, CascadeType.REMOVE})
+    @OneToMany(mappedBy = "company", cascade = {CascadeType.DETACH, CascadeType.REFRESH, CascadeType.REMOVE})
     private List<Recruitment> recruitments;
 
     public void add(Recruitment recruitment) {

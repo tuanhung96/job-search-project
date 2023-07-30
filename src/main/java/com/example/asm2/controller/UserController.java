@@ -83,7 +83,12 @@ public class UserController {
     public String uploadLogoCompany(@RequestParam("file") MultipartFile file,
                               Principal principal, HttpServletRequest request) {
         User user = userService.findByEmail(principal.getName());
-        Company company = user.getCompany();
+        Company company = null;
+        if (user.getCompany()==null) {
+            company = new Company();
+            company.setUser(user);
+        }
+        else company=user.getCompany();
 
         // save logo in uploads directory
         String siteURL = request.getRequestURL().toString().replace(request.getServletPath(), "");

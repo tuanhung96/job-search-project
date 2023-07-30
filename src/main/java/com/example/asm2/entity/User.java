@@ -34,7 +34,7 @@ public class User {
     @Column(name = "status")
     private Integer status;
 
-    @OneToOne(cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.REFRESH})
+    @OneToOne(cascade = {CascadeType.DETACH, CascadeType.REFRESH})
     @JoinColumn(name = "role_id")
     private Role role;
 
@@ -44,10 +44,10 @@ public class User {
     @Column(name = "verification_code")
     private String verificationCode;
 
-    @OneToOne(mappedBy = "user", cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.REFRESH, CascadeType.REMOVE})
+    @OneToOne(mappedBy = "user", cascade = {CascadeType.DETACH, CascadeType.REFRESH, CascadeType.REMOVE})
     private Company company;
 
-    @OneToOne(mappedBy = "user", cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.REFRESH, CascadeType.REMOVE})
+    @OneToOne(mappedBy = "user", cascade = {CascadeType.DETACH, CascadeType.REFRESH, CascadeType.REMOVE})
     private Cv cv;
 
 
