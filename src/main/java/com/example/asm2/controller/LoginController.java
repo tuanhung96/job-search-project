@@ -45,6 +45,7 @@ public class LoginController {
                            @RequestParam("rePassword") String rePassword,
                            HttpServletRequest request) throws MessagingException, UnsupportedEncodingException {
 
+        System.out.println("register --------------------------------------");
         // check password
         if (!user.getPassword().equals(rePassword)) {
             System.out.println("password not same --------------------------------------");
