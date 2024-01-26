@@ -47,6 +47,7 @@ public class LoginController {
 
         // check password
         if (!user.getPassword().equals(rePassword)) {
+            System.out.println("password not same --------------------------------------");
             theModel.addFlashAttribute("msg_register_error","msg_register_error");
             theModel.addFlashAttribute("user", user);
             return "redirect:/showLoginPage";
@@ -54,6 +55,7 @@ public class LoginController {
 
         // check the database if user already exists
         if (userService.userExists(user.getEmail())) {
+            System.out.println("email existed --------------------------------------");
             theModel.addFlashAttribute("email_exists","email_exists");
             theModel.addFlashAttribute("user", user);
             return "redirect:/showLoginPage";
